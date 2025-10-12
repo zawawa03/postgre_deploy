@@ -1,0 +1,22 @@
+<div class='container'>
+  <div class='row'>
+    <div class="col-md-8 mt-4">
+      <h1>ユーザープロフィール</h1>
+      <table class="table">
+        <tr>
+          <th scope="row">email</th>
+          <td><%= @user.email %></td>
+        </tr>
+        <tr>
+          <th scope="row">名前</th>
+          <td><%= @user.name %></td>
+        </tr>
+        <tr>
+          <th scope="row">avatar</th>
+          <td><%= image_tag @user.decorate.image_resize(100, 100), size: "100x100" %></td>
+        </tr>
+      </table>
+      <%= link_to "編集", edit_user_registration_path, class: "btn btn-success" %>
+    </div>
+  </div>
+</div>
