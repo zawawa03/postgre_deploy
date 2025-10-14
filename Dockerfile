@@ -3,7 +3,7 @@ ENV LANG C.UTF-8
 ENV TZ Asia/Tokyo
 RUN apt-get update -qq && \
 curl -fsSL https://deb.nodesource.com/setup_lts.x |bash - && \
-apt-get install -y nodejs build-essential default-libmysqlclient-dev && \
+apt-get install -y nodejs build-essential libpq-dev && \
 npm install -g yarn
 RUN apt-get update -qq && apt-get install -y libvips
 WORKDIR /postgres_deploy

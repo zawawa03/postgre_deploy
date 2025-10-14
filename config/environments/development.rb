@@ -80,4 +80,6 @@ Rails.application.configure do
   # config.generators.apply_rubocop_autocorrect_after_generate!
   config.action_mailer.delivery_method = :letter_opener_web
   config.action_mailer.perform_deliveries = true
+
+  config.hosts << "zawawa-test-app-2e7612db9647.herokuapp.com"
 end
